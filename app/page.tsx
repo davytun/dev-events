@@ -2,8 +2,6 @@ import EventCard from "@/components/EventCard";
 import ExploreBtn from "@/components/ExploreBtn";
 import { events } from "@/lib/constants";
 
-
-
 export default function Home() {
   return (
     <section>
@@ -21,7 +19,14 @@ export default function Home() {
         <ul className="events">
           {events.map((event) => (
             <li key={event.title}>
-              <EventCard title={event.title} image={event.image} slug={event.slug} date={event.date} location={event.location} time={event.time} />
+              <EventCard
+                title={event.title}
+                image={event.image}
+                slug={event.slug}
+                date={event.date}
+                location={event.location}
+                time={event.time}
+              />
             </li>
           ))}
         </ul>
